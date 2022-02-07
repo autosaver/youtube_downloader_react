@@ -12,8 +12,11 @@ function App() {
 
   let url = "https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=50&key=AIzaSyAD9l9pGCgVlpm2RaRErvWv4TdwZVdiCYA&q="
   let video_url = "https://www.y2mate.com/youtube/";
-  useEffect(async () => {
+  useEffect(() => {
+    async function apicall(){
     await fetch(url+"coding").then((res) => res.json()).then((res) => setdata(res.items));
+    }
+    apicall();
   });
 
   const handleClick = (id) => {
@@ -28,13 +31,11 @@ function App() {
         <Navbar setdata={setdata} url={url}/>
       </div>
       <div className="body">
-        {data.length>0 && data.map((video) => {
+        {data?.length>0 && data.map((video) => {
           return (
             <div className="body_card" key={video?.etag} onClick={()=>handleClick(video?.id?.videoId)}>
               <Card card_data={video?.snippet} />
-            </div>
-
-          )
+            </div>)
         })
         }
       </div>
