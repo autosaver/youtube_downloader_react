@@ -1,0 +1,22 @@
+.nav_title,.nav_search,.nav_disc{
+    display: flex;
+    align-items: center;
+    padding: 0px 55px 0px 15px;
+}
+
+.nav_title>img{
+    height:40px;
+}
+
+.nav_search>form>input{
+    color:cornsilk;
+    width: 250%;
+    border-radius: 10px;
+    background-color: rgb(37, 37, 37);
+    border-color: rgb(133, 144, 145);
+
+}
+
+.nav_name{
+    display: flex;
+}

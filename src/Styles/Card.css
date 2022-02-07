@@ -1,0 +1,18 @@
+.wrap_card{
+    padding: 5px;
+    height: 250px;
+}
+
+.wrap_card:hover {
+    cursor: pointer;
+    transform:scale(1.1);
+    transition: 0.5s;
+  }
+
+.card_image{
+    height: 180px;
+    width: 320px;
+}
+.card_title{
+    font-size: medium;
+}
