@@ -14,7 +14,7 @@ function App() {
   let video_url = "https://www.y2mate.com/youtube/";
   useEffect(async () => {
     await fetch(url+"coding").then((res) => res.json()).then((res) => setdata(res.items));
-  }, []);
+  });
 
   const handleClick = (id) => {
     window.open(video_url+id,"_blank"); 
