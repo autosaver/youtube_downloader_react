@@ -17,8 +17,9 @@ function App() {
     await fetch(url+"coding").then((res) => res.json()).then((res) => setdata(res.items));
     }
     apicall();
-    console.log("YO");
-  },[]);
+    console.log("Welcome to Console!");
+    console.log("Github Contact: autosaver");
+  },[url]);
 
   const handleClick = (id) => {
     window.open(video_url+id,"_blank"); 
